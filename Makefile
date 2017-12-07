@@ -22,8 +22,8 @@ node_modules: package.json
 lint: | node_modules
 	$(NODE_BIN)/jshint $(SRC) test
 
-test:
-	./node_modules/.bin/mocha --recursive --require should
+test: | node_modules
+	$(NODE_BIN)/mocha --recursive --require should
 
 clean:
 	rm -fr build node_modules
