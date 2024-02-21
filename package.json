@@ -17,10 +17,10 @@
   ],
   "dependencies": {},
   "devDependencies": {
+    "@pirxpilot/jshint": "~3",
     "browserify": "~14",
     "jsdom": "~11",
     "jsdom-global": "~3",
-    "jshint": "^2.9.5",
     "mocha": "^4.0.1",
     "should": "^13.1.3"
   },
