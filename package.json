@@ -7,7 +7,7 @@
     "email": "pirxpilot@furkot.com",
     "url": "https://pirxpilot.me"
   },
-  "repository": "pirxpilot/attach-labels",
+  "repository": "github:pirxpilot/attach-labels",
   "license": "MIT",
   "keywords": [
     "attach-labels",
