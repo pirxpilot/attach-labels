@@ -1,15 +1,15 @@
+const { describe, it, after } = require('node:test');
+
 var should = require('should');
 var attachLabels = require('../');
 
 /* global document */
 
 describe('attach-labels node module', function () {
-  before(function () {
-    this.jsdom = require('jsdom-global')();
-  });
+  const jsdom = require('jsdom-global')();
 
   after(function () {
-    this.jsdom();
+    jsdom();
   });
 
   it('should attach label to input', function () {
@@ -44,8 +44,4 @@ describe('attach-labels node module', function () {
     should.not.exist(label.getAttribute('for'));
     input.id.should.eql('');
   });
-
-
-
 });
-
