@@ -1,6 +1,6 @@
 [![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Dependency Status][gemnasium-image]][gemnasium-url]
+[![Build Status][build-image]][build-url]
+[![Dependency Status][deps-image]][deps-url]
 
 # attach-labels
 
@@ -24,11 +24,11 @@ attachLabels('Rainbow');
 
 MIT © [Damian Krzeminski](https://pirxpilot.me)
 
-[npm-image]: https://img.shields.io/npm/v/attach-labels.svg
+[npm-image]: https://img.shields.io/npm/v/attach-labels
 [npm-url]: https://npmjs.org/package/attach-labels
 
-[travis-url]: https://travis-ci.org/pirxpilot/attach-labels
-[travis-image]: https://img.shields.io/travis/pirxpilot/attach-labels.svg
+[build-url]: https://github.com/pirxpilot/attach-labels/actions/workflows/check.yaml
+[build-image]: https://img.shields.io/github/actions/workflow/status/pirxpilot/attach-labels/check.yaml?branch=main
 
-[gemnasium-image]: https://img.shields.io/gemnasium/pirxpilot/attach-labels.svg
-[gemnasium-url]: https://gemnasium.com/pirxpilot/attach-labels
+[deps-image]: https://img.shields.io/librariesio/release/npm/attach-labels
+[deps-url]: https://libraries.io/npm/attach-labels

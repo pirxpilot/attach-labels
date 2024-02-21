@@ -7,7 +7,7 @@
     "email": "pirxpilot@furkot.com",
     "url": "https://pirxpilot.me"
   },
-  "repository": "pirxpilot/attach-labels",
+  "repository": "github:pirxpilot/attach-labels",
   "license": "MIT",
   "keywords": [
     "attach-labels",
@@ -17,12 +17,10 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "browserify": "~14",
-    "jsdom": "~11",
+    "@pirxpilot/jshint": "~3",
+    "jsdom": "~24",
     "jsdom-global": "~3",
-    "jshint": "^2.9.5",
-    "mocha": "^4.0.1",
-    "should": "^13.1.3"
+    "should": "~13"
   },
   "scripts": {
     "test": "make check"
