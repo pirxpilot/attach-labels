@@ -17,7 +17,7 @@ format: | node_modules
 	$(NODE_BIN)/biome check --fix
 
 test:
-	node --require should --test
+	node --test
 
 clean:
 	rm -fr node_modules
