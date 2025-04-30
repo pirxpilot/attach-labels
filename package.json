@@ -2,12 +2,17 @@
   "name": "attach-labels",
   "version": "2.0.0",
   "description": "Attach `label` node to the `input` that follows it.",
+  "type": "module",
+  "exports": "./lib/attach-labels.js",
   "author": {
     "name": "Damian Krzeminski",
     "email": "pirxpilot@furkot.com",
     "url": "https://pirxpilot.me"
   },
-  "repository": "github:pirxpilot/attach-labels",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pirxpilot/attach-labels.git"
+  },
   "license": "MIT",
   "keywords": [
     "attach-labels",
@@ -17,16 +22,14 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@pirxpilot/jshint": "~3",
-    "jsdom": "~24",
-    "jsdom-global": "~3",
-    "should": "~13"
+    "@biomejs/biome": "^1.9.4",
+    "jsdom": "~26",
+    "jsdom-global": "~3"
   },
   "scripts": {
     "test": "make check"
   },
   "files": [
-    "index.js",
     "lib"
   ]
 }

@@ -1,47 +1,46 @@
-const { describe, it, after } = require('node:test');
-
-const should = require('should');
-const attachLabels = require('../');
+import test from 'node:test';
+import JSDOM from 'jsdom-global';
+import attachLabels from '../lib/attach-labels.js';
 
 /* global document */
 
-describe('attach-labels node module', function () {
-  const jsdom = require('jsdom-global')();
+test('attach-labels', async t => {
+  const jsdom = JSDOM();
 
-  after(function () {
+  t.after(() => {
     jsdom();
   });
 
-  it('should attach label to input', function () {
+  await t.test('should attach label to input', t => {
     document.body.innerHTML = '<label>A</label><input/>';
     attachLabels(document.body);
     const label = document.querySelector('label');
     const input = document.querySelector('input');
-    input.id.should.eql(label.getAttribute('for'));
+    t.assert.equal(input.id, label.getAttribute('for'));
   });
 
-  it('should use input ID if present', function () {
+  await t.test('should use input ID if present', t => {
     document.body.innerHTML = '<label>A</label><input id="email"/>';
     attachLabels(document.body);
     const label = document.querySelector('label');
-    label.getAttribute('for').should.eql("email");
+    t.assert.equal(label.getAttribute('for'), 'email');
   });
 
-  it('should ignore labels with "for" attribute present', function () {
+  await t.test('should ignore labels with "for" attribute present', t => {
     document.body.innerHTML = '<label for="email">A</label><input/>';
     attachLabels(document.body);
     const label = document.querySelector('label');
     const input = document.querySelector('input');
-    label.getAttribute('for').should.eql("email");
-    input.id.should.eql('');
+    t.assert.equal(label.getAttribute('for'), 'email');
+    t.assert.equal(input.id, '');
   });
 
-  it('should ignore labels with children', function () {
+  await t.test('should ignore labels with children', t => {
     document.body.innerHTML = '<label>A<input/></label>';
     attachLabels(document.body);
     const label = document.querySelector('label');
     const input = document.querySelector('input');
-    should.not.exist(label.getAttribute('for'));
-    input.id.should.eql('');
+    t.assert.ok(!label.getAttribute('for'), 'for attribute should not be set');
+    t.assert.equal(input.id, '');
   });
 });
