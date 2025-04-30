@@ -1,4 +1,10 @@
 
+3.0.0 / 2025-04-30
+==================
+
+ * use `String.padStart` to create ids
+ * transition to ESM format
+
 2.0.0 / 2024-02-21
 ==================
 
