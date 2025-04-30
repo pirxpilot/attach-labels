@@ -24,7 +24,7 @@ describe('attach-labels node module', function () {
     document.body.innerHTML = '<label>A</label><input id="email"/>';
     attachLabels(document.body);
     const label = document.querySelector('label');
-    label.getAttribute('for').should.eql("email");
+    label.getAttribute('for').should.eql('email');
   });
 
   it('should ignore labels with "for" attribute present', function () {
@@ -32,7 +32,7 @@ describe('attach-labels node module', function () {
     attachLabels(document.body);
     const label = document.querySelector('label');
     const input = document.querySelector('input');
-    label.getAttribute('for').should.eql("email");
+    label.getAttribute('for').should.eql('email');
     input.id.should.eql('');
   });
 

@@ -11,7 +11,10 @@ node_modules: package.json
 	touch $@
 
 lint: | node_modules
-	$(NODE_BIN)/jshint $(SRC) test
+	$(NODE_BIN)/biome ci
+
+format: | node_modules
+	$(NODE_BIN)/biome check --fix
 
 test:
 	node --require should --test
@@ -19,4 +22,4 @@ test:
 clean:
 	rm -fr node_modules
 
-.PHONY: clean check lint test
+.PHONY: clean check format lint test
