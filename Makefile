@@ -1,10 +1,6 @@
-PROJECT=attach-labels
 NODE_BIN=./node_modules/.bin
-SRC = index.js $(wildcard lib/*.js)
 
 check: lint test
-
-compile: build/build.js
 
 node_modules: package.json
 	yarn

@@ -1,11 +1,11 @@
-const test = require('node:test');
-
-const attachLabels = require('../');
+import test from 'node:test';
+import JSDOM from 'jsdom-global';
+import attachLabels from '../lib/attach-labels.js';
 
 /* global document */
 
 test('attach-labels', async t => {
-  const jsdom = require('jsdom-global')();
+  const jsdom = JSDOM();
 
   t.after(() => {
     jsdom();

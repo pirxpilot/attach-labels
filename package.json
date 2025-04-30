@@ -2,12 +2,17 @@
   "name": "attach-labels",
   "version": "2.0.0",
   "description": "Attach `label` node to the `input` that follows it.",
+  "type": "module",
+  "exports": "./lib/attach-labels.js",
   "author": {
     "name": "Damian Krzeminski",
     "email": "pirxpilot@furkot.com",
     "url": "https://pirxpilot.me"
   },
-  "repository": "github:pirxpilot/attach-labels",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pirxpilot/attach-labels.git"
+  },
   "license": "MIT",
   "keywords": [
     "attach-labels",
@@ -25,7 +30,6 @@
     "test": "make check"
   },
   "files": [
-    "index.js",
     "lib"
   ]
 }
