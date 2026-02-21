@@ -1,4 +1,11 @@
 
+3.0.1 / 2026-02-20
+==================
+
+ * update github actions
+ * upgrade `jsdom` to ~28
+ * upgrade `biome` to 2.4.4
+
 3.0.0 / 2025-04-30
 ==================
 

@@ -1,6 +1,6 @@
 {
   "name": "attach-labels",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Attach `label` node to the `input` that follows it.",
   "type": "module",
   "exports": "./lib/attach-labels.js",
