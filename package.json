@@ -20,10 +20,9 @@
     "input",
     "browser"
   ],
-  "dependencies": {},
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
-    "jsdom": "~26",
+    "@biomejs/biome": "2.4.4",
+    "jsdom": "~28",
     "jsdom-global": "~3"
   },
   "scripts": {

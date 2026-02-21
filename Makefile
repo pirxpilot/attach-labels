@@ -1,21 +1,15 @@
-NODE_BIN=./node_modules/.bin
-
 check: lint test
 
-node_modules: package.json
-	yarn
-	touch $@
+lint:
+	./node_modules/.bin/biome ci
 
-lint: | node_modules
-	$(NODE_BIN)/biome ci
-
-format: | node_modules
-	$(NODE_BIN)/biome check --fix
+format:
+	./node_modules/.bin/biome check --fix
 
 test:
-	node --test
+	node --test $(TEST_OPTS)
 
-clean:
-	rm -fr node_modules
+test-cov: TEST_OPTS := --experimental-test-coverage
+test-cov: test
 
-.PHONY: clean check format lint test
+.PHONY: check format lint test test-cov
